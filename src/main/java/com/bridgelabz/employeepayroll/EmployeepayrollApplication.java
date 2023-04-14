@@ -9,6 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class EmployeepayrollApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeepayrollApplication.class, args);
-		System.out.println("Application is Started");
+		log.info("Application is Started");
 	}
 }
