@@ -9,7 +9,7 @@ import java.util.Optional;
 public interface EmployeeService {
     EmpData addEmployee(EmpDTO empDTO);
 
-    Optional<EmpData> getEmployeeById(int id);
+    EmpData getEmployeeById(int id);
 
     List<EmpData> getDisplayAllEmployee();
 

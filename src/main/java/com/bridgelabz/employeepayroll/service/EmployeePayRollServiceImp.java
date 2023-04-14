@@ -25,9 +25,9 @@ public class EmployeePayRollServiceImp implements EmployeeService{
     }
 
     @Override
-    public Optional<EmpData> getEmployeeById(int id) {
+    public EmpData getEmployeeById(int id) {
+       return  empRepo.findById(id).orElseThrow(()->new EmployeeCustomException("Employee not Found with ID:: " + id));
 
-        return empRepo.findById(id);
     }
 
     @Override

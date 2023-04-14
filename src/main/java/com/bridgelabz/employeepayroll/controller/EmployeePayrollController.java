@@ -24,7 +24,7 @@ public class EmployeePayrollController {
     }
     @GetMapping("/{id}")
     public ResponseDTO getEmployeeById(@PathVariable int id){
-        Optional<EmpData> empData = employeeService.getEmployeeById(id);
+        EmpData empData = employeeService.getEmployeeById(id);
         ResponseDTO responseDTO = new ResponseDTO("Eployee Data Found",empData);
         return responseDTO;
     }

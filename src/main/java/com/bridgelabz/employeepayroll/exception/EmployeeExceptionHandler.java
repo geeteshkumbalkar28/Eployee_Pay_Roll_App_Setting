@@ -20,4 +20,11 @@ public class EmployeeExceptionHandler {
         ResponseDTO responseDTO = new ResponseDTO("Execption while handling RestApi call",errorMessage);
         return new ResponseEntity<>(responseDTO, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(EmployeeCustomException.class)
+    public ResponseEntity<ResponseDTO> handlerMethodArgugumentValid(EmployeeCustomException exception){
+        ResponseDTO responseDTO = new ResponseDTO("Execption while handling RestApi call",exception.getMessage());
+        return new ResponseEntity<>(responseDTO, HttpStatus.BAD_REQUEST);
+
+    }
 }
