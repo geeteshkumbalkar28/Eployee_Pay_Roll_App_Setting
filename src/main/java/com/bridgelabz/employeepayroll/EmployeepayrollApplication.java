@@ -13,6 +13,9 @@ import javax.naming.Context;
 public class EmployeepayrollApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EmployeepayrollApplication.class, args);
-		log.info("Application is Started");
+		log.info("Employee PayRoll Application Started SuccessFully.....!!!");
+		log.info("Application is started in {} environment", context.getEnvironment().getProperty("environment"));
+		log.info("MySQL Database UserName is ::  {}", context.getEnvironment().getProperty("spring.datasource.username"));
+		log.info("MySQL Database Password is ::  {}", context.getEnvironment().getProperty("spring.datasource.password"));
 	}
 }
