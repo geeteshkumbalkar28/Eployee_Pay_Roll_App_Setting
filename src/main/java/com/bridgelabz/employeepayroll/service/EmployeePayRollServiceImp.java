@@ -1,6 +1,7 @@
 package com.bridgelabz.employeepayroll.service;
 
 import com.bridgelabz.employeepayroll.dto.EmpDTO;
+import com.bridgelabz.employeepayroll.exception.EmployeeCustomException;
 import com.bridgelabz.employeepayroll.model.EmpData;
 import com.bridgelabz.employeepayroll.repository.EmpRepo;
 import org.springframework.beans.factory.annotation.Autowired;
